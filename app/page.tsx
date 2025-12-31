@@ -77,7 +77,7 @@ export default function Home() {
     setLoading(false)
   }
 
-  async function handleBrainDump(text: string) {
+  async function handleBrainDump(text: string): Promise<boolean> {
     if (!user) return false
 
     const response = await fetch('/api/brain-dump', {
