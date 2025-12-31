@@ -78,7 +78,7 @@ export default function Home() {
   }
 
   async function handleBrainDump(text: string) {
-    if (!user) return
+    if (!user) return false
 
     const response = await fetch('/api/brain-dump', {
       method: 'POST',
